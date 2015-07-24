@@ -16,13 +16,13 @@ void interval::set_gamma_priors()
 	double var0 = sd0_d*sd0_d; 	//prior variance in the nb of events in a seq interval of size d_Mb
 	*/
 	// Based on HapMap, we expect the variance to increase proportional to (window size)^1.5.
-	double var0 = prior_variance_rate * pow(d_Mb, 1.65);
+	double var0 = prior_variance_rate * pow(d_Mb, 1.5);
 	double sd0_d = sqrt(var0);
 	
 	// Convert to recombination fraction
 	r0 = 0.5*(exp(0.04*d_cM) - 1.0) / (exp(-0.04*d_cM)+1.0);
 	double r0_sd = 0.5*(exp(0.04*sd0_d) - 1.0) / (exp(-0.04*sd0_d)+1.0);
-    
+
 	double c = r0_sd*r0_sd;	// Required variance for this interval
 	alpha0 = r0*r0 / c;
 	beta0 = r0 / c;

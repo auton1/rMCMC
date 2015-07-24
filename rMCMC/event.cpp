@@ -16,7 +16,7 @@ void event::draw_new_current_interval(vector< interval > &intervals)
 {
 	static vector<double> lambda_subset;	// Keep as static to avoid repeatedly reserving memory
 	lambda_subset.resize(N_intervals);
-	double sum = 0;
+	//double sum = 0;
 	for (unsigned int ui=0; ui<N_intervals; ui++)
 	{
 		lambda_subset[ui] = intervals[min_interval_idx+ui].lambdaij;

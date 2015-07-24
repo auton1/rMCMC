@@ -68,7 +68,7 @@ void computeMLE(vector<event> &events, vector<interval> &intervals, double &mean
 int main(int argc, char* argv[])
 {
 	// time check
-	time_t start_time, time_point, end_time;
+	time_t start_time, end_time;
 	time(&start_time);
 	struct tm * timeinfo;
 	timeinfo = localtime(&start_time);
@@ -80,9 +80,9 @@ int main(int argc, char* argv[])
     int nchains = 100000;	// nb of iterations of the MCMC chain
     int burnin = 33000;     // nb of burn-in iterations
 	double prior_rate = 1.0; // prior recombination rate of 1 cM/Mb
-    double prior_var = 0.76; // prior variance set by default to 5 (var=0.66 at 1Mb scale in HapMap2)
+    double prior_var = 5.0; // prior variance set by default to 5 (var=0.66 at 1Mb scale in HapMap2)
     int samp = 1000;
-    int seed = start_time;
+    int seed = (int)start_time;
 	double HDI_region = 0.95;
 	bool prior_rate_set = false;
 	string M_filename=""; // Path/filename to the nb of meioses file
@@ -175,7 +175,7 @@ int main(int argc, char* argv[])
     vector<event> events;
   	readFile(filename, events);
 
-  	unsigned int nb_events = events.size();
+  	unsigned int nb_events = (unsigned int)events.size();
   	cerr << "Number of events: " << nb_events << endl;
 
  	// Read nbmeioses file and build intervals
@@ -184,7 +184,7 @@ int main(int argc, char* argv[])
 	cerr << "nbmeioses file read" << endl;
  	set_intervals(events, intervals); // find overlap btw intervals and events
 
- 	unsigned int nb_intervals = intervals.size();
+ 	unsigned int nb_intervals = (unsigned int)intervals.size();
 	cerr << "Number of sequence intervals: " << nb_intervals << endl;
 
 	/*
@@ -264,7 +264,7 @@ int main(int argc, char* argv[])
   	 	{
   	 		intervals[i].alphaij = intervals[i].alpha0 + vec_nb_events[i];
   	 		// Not sure if 2 is needed here. 
-  	 		intervals[i].betaij = intervals[i].M * (intervals[i].beta0 + 1.0);
+  	 		intervals[i].betaij = intervals[i].beta0 + intervals[i].M;
 
 	  	 	// Step 2. Sample the rec. rates in each interval
    			intervals[i].draw_new_lamba();
@@ -316,7 +316,7 @@ int main(int argc, char* argv[])
 	ofstream out(out_filename1);
 	// Output a table with: interval_ID, interval_startpos, interval_stoppos, rfr,
   	// nb of samples (count of lambdas values sampled), sum of lambda values and sum of squares of lambda values
-  	out << "#int_ID\tstart_pos\tstop_pos\tprior_rfr\tmean\tvar\tlower_95\tupper_95\tlower_99\tupper_99" << endl;
+  	out << "#int_ID\tstart_pos\tstop_pos\tprior_recomb_fraction\tmean\tvar\tlower_95\tupper_95\tlower_99\tupper_99" << endl;
   	for (int i=0; i<sample_count.size();i++)
   	{
   		out << i << "\t";
@@ -325,7 +325,7 @@ int main(int argc, char* argv[])
   		out << intervals[i].r0 << "\t";
   		double mean = sample_sum[i] / sample_count[i];
   		double var = (sample_count[i]*sample_sumsq[i] - (sample_sum[i]*sample_sum[i])) / (sample_count[i] * (sample_count[i]-1));
-  		double sd = sqrt(var);
+  		//double sd = sqrt(var);
   		double l95 = intervals[i].lower95CI[interval::CI95_tresh-1];
   		double u95 = intervals[i].upper95CI[0];
   		double l99 = intervals[i].lower99CI[interval::CI99_tresh-1];
@@ -378,8 +378,8 @@ int main(int argc, char* argv[])
 
    	// Convert time
    	unsigned int minutes, hours, secs_left, mins_left;
-   	hours = seconds / 3600;
-   	minutes = seconds / 60;
+   	hours = (unsigned int)seconds / 3600;
+   	minutes = (unsigned int)seconds / 60;
    	mins_left = minutes % 60;
    	secs_left = seconds % 60;
 

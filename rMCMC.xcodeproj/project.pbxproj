@@ -11,7 +11,6 @@
 		23E9DCBD1B6287EB000E349E /* interval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCAF1B6287EB000E349E /* interval.cpp */; };
 		23E9DCBE1B6287EB000E349E /* set_intervals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB11B6287EB000E349E /* set_intervals.cpp */; };
 		23E9DCBF1B6287EB000E349E /* read_nbmeioses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB21B6287EB000E349E /* read_nbmeioses.cpp */; };
-		23E9DCC01B6287EB000E349E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB31B6287EB000E349E /* Makefile */; };
 		23E9DCC11B6287EB000E349E /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB61B6287EB000E349E /* event.cpp */; };
 		23E9DCC21B6287EB000E349E /* readFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB81B6287EB000E349E /* readFile.cpp */; };
 		23E9DCC31B6287EB000E349E /* LogFactorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB91B6287EB000E349E /* LogFactorial.cpp */; };
@@ -155,7 +154,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E9DCC01B6287EB000E349E /* Makefile in Sources */,
 				23E9DCC21B6287EB000E349E /* readFile.cpp in Sources */,
 				23E9DCBF1B6287EB000E349E /* read_nbmeioses.cpp in Sources */,
 				23E9DCBD1B6287EB000E349E /* interval.cpp in Sources */,

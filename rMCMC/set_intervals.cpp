@@ -9,8 +9,8 @@
 
 void set_intervals(vector<event> &events, vector<interval> &intervals)
 {
-	int nevents;
-	nevents = events.size();
+	unsigned int nevents;
+	nevents = (unsigned int)events.size();
 
  	// For each event, find min_interval_idx and max_interval.idx
  	for (int i=0; i<events.size(); i++)
