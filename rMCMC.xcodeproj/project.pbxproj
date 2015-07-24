@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23E9DC8E1B6286CA000E349E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DC8D1B6286CA000E349E /* main.cpp */; };
+		23E9DCBC1B6287EB000E349E /* rMCMC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCAE1B6287EB000E349E /* rMCMC.cpp */; };
+		23E9DCBD1B6287EB000E349E /* interval.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCAF1B6287EB000E349E /* interval.cpp */; };
+		23E9DCBE1B6287EB000E349E /* set_intervals.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB11B6287EB000E349E /* set_intervals.cpp */; };
+		23E9DCBF1B6287EB000E349E /* read_nbmeioses.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB21B6287EB000E349E /* read_nbmeioses.cpp */; };
+		23E9DCC01B6287EB000E349E /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB31B6287EB000E349E /* Makefile */; };
+		23E9DCC11B6287EB000E349E /* event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB61B6287EB000E349E /* event.cpp */; };
+		23E9DCC21B6287EB000E349E /* readFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB81B6287EB000E349E /* readFile.cpp */; };
+		23E9DCC31B6287EB000E349E /* LogFactorial.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 23E9DCB91B6287EB000E349E /* LogFactorial.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +31,22 @@
 
 /* Begin PBXFileReference section */
 		23E9DC8A1B6286CA000E349E /* rMCMC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = rMCMC; sourceTree = BUILT_PRODUCTS_DIR; };
-		23E9DC8D1B6286CA000E349E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		23E9DCAC1B6287EB000E349E /* test6_nbmeioses.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test6_nbmeioses.txt; sourceTree = "<group>"; };
+		23E9DCAD1B6287EB000E349E /* test6_events.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test6_events.txt; sourceTree = "<group>"; };
+		23E9DCAE1B6287EB000E349E /* rMCMC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = rMCMC.cpp; sourceTree = "<group>"; };
+		23E9DCAF1B6287EB000E349E /* interval.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = interval.cpp; sourceTree = "<group>"; };
+		23E9DCB01B6287EB000E349E /* interval.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = interval.h; sourceTree = "<group>"; };
+		23E9DCB11B6287EB000E349E /* set_intervals.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = set_intervals.cpp; sourceTree = "<group>"; };
+		23E9DCB21B6287EB000E349E /* read_nbmeioses.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = read_nbmeioses.cpp; sourceTree = "<group>"; };
+		23E9DCB31B6287EB000E349E /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		23E9DCB41B6287EB000E349E /* set_intervals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = set_intervals.h; sourceTree = "<group>"; };
+		23E9DCB51B6287EB000E349E /* read_nbmeioses.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = read_nbmeioses.h; sourceTree = "<group>"; };
+		23E9DCB61B6287EB000E349E /* event.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = event.cpp; sourceTree = "<group>"; };
+		23E9DCB71B6287EB000E349E /* event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = event.h; sourceTree = "<group>"; };
+		23E9DCB81B6287EB000E349E /* readFile.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = readFile.cpp; sourceTree = "<group>"; };
+		23E9DCB91B6287EB000E349E /* LogFactorial.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LogFactorial.cpp; sourceTree = "<group>"; };
+		23E9DCBA1B6287EB000E349E /* readFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = readFile.h; sourceTree = "<group>"; };
+		23E9DCBB1B6287EB000E349E /* LogFactorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogFactorial.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +79,22 @@
 		23E9DC8C1B6286CA000E349E /* rMCMC */ = {
 			isa = PBXGroup;
 			children = (
-				23E9DC8D1B6286CA000E349E /* main.cpp */,
+				23E9DCAC1B6287EB000E349E /* test6_nbmeioses.txt */,
+				23E9DCAD1B6287EB000E349E /* test6_events.txt */,
+				23E9DCAE1B6287EB000E349E /* rMCMC.cpp */,
+				23E9DCAF1B6287EB000E349E /* interval.cpp */,
+				23E9DCB01B6287EB000E349E /* interval.h */,
+				23E9DCB11B6287EB000E349E /* set_intervals.cpp */,
+				23E9DCB21B6287EB000E349E /* read_nbmeioses.cpp */,
+				23E9DCB31B6287EB000E349E /* Makefile */,
+				23E9DCB41B6287EB000E349E /* set_intervals.h */,
+				23E9DCB51B6287EB000E349E /* read_nbmeioses.h */,
+				23E9DCB61B6287EB000E349E /* event.cpp */,
+				23E9DCB71B6287EB000E349E /* event.h */,
+				23E9DCB81B6287EB000E349E /* readFile.cpp */,
+				23E9DCB91B6287EB000E349E /* LogFactorial.cpp */,
+				23E9DCBA1B6287EB000E349E /* readFile.h */,
+				23E9DCBB1B6287EB000E349E /* LogFactorial.h */,
 			);
 			path = rMCMC;
 			sourceTree = "<group>";
@@ -118,7 +155,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23E9DC8E1B6286CA000E349E /* main.cpp in Sources */,
+				23E9DCC01B6287EB000E349E /* Makefile in Sources */,
+				23E9DCC21B6287EB000E349E /* readFile.cpp in Sources */,
+				23E9DCBF1B6287EB000E349E /* read_nbmeioses.cpp in Sources */,
+				23E9DCBD1B6287EB000E349E /* interval.cpp in Sources */,
+				23E9DCC11B6287EB000E349E /* event.cpp in Sources */,
+				23E9DCBE1B6287EB000E349E /* set_intervals.cpp in Sources */,
+				23E9DCBC1B6287EB000E349E /* rMCMC.cpp in Sources */,
+				23E9DCC31B6287EB000E349E /* LogFactorial.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +279,7 @@
 				23E9DC931B6286CA000E349E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
