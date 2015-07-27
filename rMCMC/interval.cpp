@@ -15,8 +15,8 @@ void interval::set_gamma_priors()
 	double sd0_d = (sd0 * d_Mb);  	// sdev of genetic distance in centiMorgan
 	double var0 = sd0_d*sd0_d; 	//prior variance in the nb of events in a seq interval of size d_Mb
 	*/
-	// Based on HapMap, we expect the variance to increase proportional to (window size)^1.5.
-	double var0 = prior_variance_rate * pow(d_Mb, 1.5);
+	// Based on HapMap, we expect the variance to increase proportional to (window size)^1.65.
+	double var0 = prior_variance_rate * pow(d_Mb, 1.65);
 	double sd0_d = sqrt(var0);
 	
 	// Convert to recombination fraction
